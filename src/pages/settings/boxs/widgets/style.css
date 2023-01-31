@@ -1,0 +1,10 @@
+.widgets-control .check-box-container{
+    display: flex;
+    align-items: center;  
+    margin-bottom: 10px;
+}
+.widgets-control .check-box-container label{
+    padding:0 10px;
+    cursor: pointer;
+    user-select: none;
+}

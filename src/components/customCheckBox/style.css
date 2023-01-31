@@ -1,0 +1,33 @@
+.custom-check-box{
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    display: inline-flex;
+    --size:14px;
+}
+.custom-check-box::before{
+    content: "";
+    border: 2px solid var(--grey-color);
+    width: var(--size);
+    height: var(--size);
+    background-color: transparent;
+
+}
+.custom-check-box::after{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    font-weight: 900;
+    transform:scale(0) rotate(360deg);
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-color);
+    color: white;
+    transition: var(--main-trans);
+}
+.custom-check-box:checked::after{
+    transform:scale(1) ;
+}

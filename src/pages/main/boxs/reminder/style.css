@@ -1,0 +1,29 @@
+.main-page .reminder .box{
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-auto-flow: 1fr;
+    gap: 30px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.main-page .reminder .box::before{
+    content: "";
+    margin: auto;
+    padding: 8px;
+    display: block;
+    border-radius: 50%;
+    background-color: var(--color);
+}
+.main-page .reminder .box .info *{
+    margin: 0;
+}
+.main-page .reminder .box::after{
+    content: "";
+    height: 100%;
+    width: 2px;
+    height: 100%;
+    background-color: var(--color);
+    top: 0;
+    position: absolute;
+    margin: 0 calc(16px + 15px );
+}

@@ -1,0 +1,29 @@
+.main-page .quick-draft{
+    grid-template-rows: repeat(4,auto) 1fr;
+}
+.main-page .quick-draft p{
+    color:var(--gray-color);
+}
+.main-page .quick-draft input:not([type="submit"]),
+.main-page .quick-draft textarea{
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    background-color: #EEEEEE;
+    border: none;
+    padding: 10px;
+    font-size: 17px;
+}
+.main-page .quick-draft textarea{
+    resize: none;
+    height: 200px;
+}
+.main-page .quick-draft input[type="submit"]{
+    border: none;
+    display: block !important;
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    cursor: pointer;
+    margin-top: auto !important;
+}

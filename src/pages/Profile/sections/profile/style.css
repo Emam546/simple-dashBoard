@@ -1,0 +1,38 @@
+.profile-control .basic-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.profile-control .basic-info  > *{
+    margin-bottom: 10px;
+}
+
+.profile-control .basic-info > .img-holder{
+    --size:70px;
+    width: var(--size);
+    height: var(--size);
+    background-color: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-control .basic-info > .img-holder img{
+    width: 100%;
+}
+.rating-bar{
+    width: 150px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+}
+.rating-bar span{
+    display: block;
+    height: 100%;
+    background-color: var(--second-color);
+}
+
+.profile-control .start-rated i.fa-solid{
+    color: #FFC107;
+    font-size: 17px;
+}

@@ -1,0 +1,80 @@
+.header{
+    background-color: white;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.header + *{
+    padding: 15px;
+}
+.header form{
+    display: grid;
+    width: max-content;
+    grid-template-columns: auto 1fr;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    gap: 10px;
+}
+.header form i{
+    font-size: 14px;
+    margin: auto;
+}
+
+.header form input[type="search"]{
+    border:none;
+    flex-shrink: 2;
+    --original-width:150px;
+    width:var(--original-width);
+    transition: var(--main-trans);
+}
+.header form input[type="search"]:focus{
+    width:calc(var(--original-width) + 40px)
+}
+.header .user-section{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: fit-content;
+    margin-left: auto;
+    gap: 20px;
+}
+.header .user-section i{
+    font-size: 25px;
+    cursor: pointer;
+    margin: auto;
+}
+.header .user-section i.notification{
+    position: relative;
+}
+.header .user-section i.notification::after{
+    content: "";
+    position: absolute;
+    --size:9px;
+    width: var(--size);
+    height: var(--size);
+    background-color: red;
+    top: 0;
+    right: -3px;
+    
+}
+.header .user-section .img-holder{
+    width: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    align-self: stretch;
+}
+.header .user-section .img-holder img{
+    width: 100%;
+}
+@media(max-width:400px){
+    .header{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .header form{
+        width: 100%;
+    }
+    .header form input[type="search"]{
+        --original-width:100%;
+    }
+}

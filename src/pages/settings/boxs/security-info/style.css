@@ -1,0 +1,25 @@
+.security .content > *{
+    margin-top: 20px;
+}
+.security .content .info *{
+    margin: 4px 0;
+}
+.security .content a{
+    padding:5px 10px;
+    font-size: 20;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: auto;
+}
+.security .content .password a{
+    color: white;
+    background-color: var(--second-color);
+}
+.security .content .devices a{
+    background-color: #eee;
+    color: black;
+}

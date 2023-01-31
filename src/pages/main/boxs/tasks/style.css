@@ -1,0 +1,27 @@
+.main-page .tasks-box .box{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+}
+.main-page .tasks-box .box:not(:last-child){
+    border-bottom: 1px solid #ccc;
+}
+.main-page .tasks-box .box .text-container *{
+    margin: 5px 0;
+}
+.main-page .tasks-box .box i{
+    margin: auto;
+    font-size: 20px;
+    transition: var(--main-trans);
+}
+.main-page .tasks-box .box i:hover{
+    color: var(--color);
+    cursor: pointer;
+}
+.main-page .tasks-box .box.disabled {
+    color: #ccc;
+    text-decoration: solid;
+    text-decoration-line: line-through;
+}

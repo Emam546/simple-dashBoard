@@ -1,0 +1,26 @@
+.general-info label{
+    display: block;
+    margin: 5px 0;
+}
+.general-info input[type="text"]{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.general-info input[type="text"]:disabled{
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+}
+.general-info .email-container{
+    display: flex;
+}
+.general-info .email-container .change-button{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--second-color);
+    padding:0 15px;
+}

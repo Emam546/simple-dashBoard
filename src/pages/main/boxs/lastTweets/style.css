@@ -1,0 +1,35 @@
+.main-page .tweets{
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+}
+.main-page .tweets .title{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+.main-page .tweets .title .img-holder{
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.main-page .tweets .title .img-holder img{
+    width: 100%;
+}
+.main-page .tweets .title *{
+    margin: 0;
+}
+.main-page .tweets .title .info p{
+    margin: 5px 0;
+}
+.main-page .tweets .likes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+.main-page .tweets .likes i{
+    margin: 0 5px;
+    
+}

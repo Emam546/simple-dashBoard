@@ -1,0 +1,18 @@
+.special-title{
+    font-size: 35px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+    word-break: break-all;
+}
+.special-title::before{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 40px;
+    background-color: black;
+    bottom: 0;
+}
+.special-title:empty{
+    display: none;
+}

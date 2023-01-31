@@ -1,0 +1,47 @@
+.social-info .input-container{
+    --border-color:#ddd;
+    width: 100%;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: #F6F6F6;
+    height: 40px;
+}
+.social-info .input-container::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color:var(--border-color);
+    top: 0;
+    margin:0 35px;
+    z-index: 100;
+}
+.social-info .input-container i{
+    width: 35px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888888;
+}
+.social-info .input-container:focus-within i{
+    color: black;
+}
+.social-info .input-container input:focus{
+    outline: none;
+}
+.social-info .input-container input{
+    position: relative;
+    width: 100%;
+    padding:5px 10px;
+    font-size: 13px;
+    border: none;
+    align-self: stretch;
+    background-color: inherit;
+}
+
+

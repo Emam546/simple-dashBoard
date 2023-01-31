@@ -1,0 +1,20 @@
+.siteControl .website-control {
+    margin-bottom: 10px;
+}
+.siteControl .website-control .info *{
+    margin: 5px 0;
+}
+.siteControl  textarea{
+    display: block;
+    resize:  none;
+    margin: 0;
+    margin-top: 30px;
+    height: 180px;
+    width: 100% !important;
+    border:  1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+}
+.siteControl  textarea:focus{
+    outline: none;
+}

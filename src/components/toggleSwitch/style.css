@@ -1,0 +1,36 @@
+.toggle-switch{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.switcher {
+    background-color: #ccc;
+    width: 75px;
+    height: 30px;
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+}
+.switcher-checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.switcher::before{
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    content: "\f057";
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: var(--main-trans);
+}
+.toggle-switch:checked + .switcher{
+    background-color: var(--second-color);
+}
+.toggle-switch:checked + .switcher::before{
+    left: 46px;
+    content: "\f058";
+}
