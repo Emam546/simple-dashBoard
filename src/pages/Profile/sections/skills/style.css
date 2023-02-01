@@ -1,0 +1,15 @@
+
+.profile-skills ul{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+}
+.profile-skills li{
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    margin: 5px;
+}

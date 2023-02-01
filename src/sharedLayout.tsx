@@ -19,17 +19,27 @@ const routes = [
     {
         title: "Profile",
         path: "/profile",
-    }
+    },
+    {
+        title: "Projects",
+        path: "/projects",
+    },
+    {
+        title: "Courses",
+        path: "/courses",
+    },
 ];
 export function SharedLayout() {
-    const [data, setData] = useGitUserData("Emam546");
+    
+    const [data,] = useGitUserData("soumyajit4419");
+    const location = useLocation();
     const passSecond = useAfterPeriod(1000);
     if (data === null) return <Navigate to="/404" />;
     if (data === undefined) {
         if (passSecond) return <Loading />;
         return <></>;
     }
-    const location = useLocation();
+
     const currentRoute = routes.find((route) =>
         matchPath(location.pathname, route.path)
     ) || { title: "404" };

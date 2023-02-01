@@ -1,0 +1,28 @@
+.courses-page .loadingio-spinner-spinner-giop12hmwvc {
+    display: block;
+    margin: auto;
+}
+.courses-page .boxes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+}
+.courses-page .box .thumbnail{
+    width: 100%;
+    position: relative;
+}
+.courses-page .box .thumbnail img{
+    width: 100%;
+}
+.courses-page .box .thumbnail .img-user{
+    aspect-ratio: 1/1;
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    margin: 10px;
+    border: 1px solid white;
+}

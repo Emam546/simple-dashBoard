@@ -4,6 +4,8 @@ import { SharedLayout } from "./sharedLayout";
 import Main from "./pages/main";
 import Settings from "./pages/settings";
 import Profile from "./pages/Profile";
+import Projects from "./pages/projects";
+import Courses from "./pages/courses";
 
 function App() {
     return (
@@ -14,6 +16,8 @@ function App() {
                         <Route path="/" element={<Main/>} />
                         <Route path="/settings" element={<Settings/>} />
                         <Route path="/profile" element={<Profile/>} />
+                        <Route path="/projects" element={<Projects/>} />
+                        <Route path="/courses" element={<Courses/>} />
                     </Route>
                     <Route path="*" element={<h1>404</h1>} />
                 </Routes>

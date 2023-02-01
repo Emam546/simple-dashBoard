@@ -1,0 +1,36 @@
+
+.activities .box{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 15px;
+    padding: 20px 0;
+    margin: 0;
+}
+.activities .box:not(:last-child){
+    border-bottom: 1px solid #eee;
+}
+@media(max-width:500px){
+    .activities .box{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 5px;
+    }
+}
+.activities .box .img-holder{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin:0 auto;
+}
+.activities .box .img-holder img{
+    width: 100%;
+}
+.activities .box .text-container{
+    padding-top: 10px;
+    
+}
+.activities .box .text-container p{
+    margin-top: 6px;
+}

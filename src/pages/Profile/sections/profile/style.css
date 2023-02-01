@@ -1,16 +1,25 @@
+.profile-control{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: white;
+    border-radius: 5px;
+}
+
 .profile-control .basic-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: auto;
+    padding: 30px 0px;
 }
 .profile-control .basic-info  > *{
     margin-bottom: 10px;
 }
 
 .profile-control .basic-info > .img-holder{
-    --size:70px;
+    --size:100px;
     width: var(--size);
     height: var(--size);
     background-color: #ccc;
@@ -35,4 +44,77 @@
 .profile-control .start-rated i.fa-solid{
     color: #FFC107;
     font-size: 17px;
+}
+.profile .info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+.profile .info .box{
+    padding: 20px;
+    border: 1px solid #eee;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+.profile .info .box>h4{
+    color: var(--grey-color);
+    margin-top: 5px;
+}
+.profile .info .text-container{
+    margin-bottom: 20px;
+}
+.profile .info .text-container *{
+    margin: 5px 0;
+}
+.profile .info .text-container span{
+    color: var(--grey-color);
+    
+}
+.profile .info .custom-checkbox-profile{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60px;
+    height: 15px;
+    background-color: #CCCCCC;
+    border-radius: 20px;
+    margin-top: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.profile .info .custom-checkbox-profile::after{
+    content: '\f00d';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    font-weight: bold;
+    background-color: white;
+    --size:13px;
+    width: var(--size);
+    height: var(--size);
+    color: #CCCCCC;
+    border-radius: 50%;
+    font-size: 13px;
+    transition: var(--main-trans);
+    left: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile .info .custom-checkbox-profile:checked{
+    background-color: var(--second-color);
+}
+.profile .info .custom-checkbox-profile:checked:after{
+    content: "\f00c";
+    color: var(--second-color);
+    left: calc(100% - var(--size) - 2px );
+}
+@media (max-width:768px){
+    .profile-control{
+        grid-template-columns: 1fr;
+    }
+
+}
+@media (max-width:500px){
+    .profile .info{
+        grid-template-columns:1fr;
+    }
 }
