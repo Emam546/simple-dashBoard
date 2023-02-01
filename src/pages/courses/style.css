@@ -4,8 +4,21 @@
 }
 .courses-page .boxes-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap: 20px;
+}
+@media(max-width:768px){
+    .courses-page .boxes-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+.courses-page .boxes-container .box{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
 }
 .courses-page .box .thumbnail{
     width: 100%;
@@ -16,8 +29,8 @@
 }
 .courses-page .box .thumbnail .img-user{
     aspect-ratio: 1/1;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-color: #eee;
     border-radius: 50%;
     overflow: hidden;
@@ -25,4 +38,39 @@
     top: 0px;
     margin: 10px;
     border: 1px solid white;
+}
+.courses-page .box .thumbnail ~ *{
+    padding: 20px;
+}
+.courses-page .box .text-container p{
+    margin: 10px 0;
+}
+.courses-page .box > .Course-Info{
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--second-color);
+    padding: 5px 10px;
+    margin:0 auto;
+    margin-top: auto;
+    width: fit-content;
+    border-radius: 5px;
+}
+.courses-page .box .end{
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.courses-page .box .end span.PeopleNum::before{
+    content: "\f007";
+    font-family: "Font Awesome 5 Free";
+    padding:0 5px;
+}   
+.courses-page .box .end span.money.dollar::before{
+    content: "\24";
+    font-family: "Font Awesome 5 Free";
+    padding:0 5px;
 }

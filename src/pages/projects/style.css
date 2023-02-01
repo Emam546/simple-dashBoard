@@ -8,6 +8,11 @@
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 20px;
 }
+@media (max-width:768px){
+    .projects-page .boxes-container {
+        grid-template-columns: 1fr;
+    } 
+}
 .projects-page .boxes-container .box{
     background-color: white;
     padding: 20px;
@@ -42,6 +47,7 @@
 .projects-page .box .requireMents{
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
     margin: 0;
     padding: 10px 0;
     border-top: 1px solid #eee;
@@ -58,12 +64,13 @@
 .projects-page .box .end{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding-top: 20px;
     margin-top: auto;
 }
 .projects-page .box .end .progress-bar{
-    width: 250px;
+    width: clamp(100px,60%,250px);
     height: 7px;
     background-color: #EEEEEE;
     
