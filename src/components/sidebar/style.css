@@ -8,7 +8,6 @@
     background-color: white;
     box-shadow: 0 0 10px #ddd;
     padding: 10px;
-    
 }
 #root{
     display: grid;
@@ -69,7 +68,6 @@
     justify-content: center;
     align-items: center;
     user-select: none;
-
 }
 
 .sidebar nav .nav-link.active {
@@ -124,8 +122,8 @@
         width: 100%;
     }
     .sidebar nav {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(40px,1fr));
+        padding: 0 5px;
     }
 }

@@ -1,8 +1,9 @@
 .header{
     background-color: white;
     padding: 15px;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .header + *{
     padding: 15px;
@@ -32,18 +33,15 @@
     width:calc(var(--original-width) + 40px)
 }
 .header .user-section{
-    display: grid;
-    grid-template-columns: auto auto;
-    width: fit-content;
-    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
     gap: 20px;
 }
 .header .user-section i{
     font-size: 25px;
     cursor: pointer;
-    margin: auto;
-}
-.header .user-section i{
     position: relative;
 }
 .header .user-section i.notification::after{
@@ -59,16 +57,16 @@
 }
 .header .user-section .img-holder{
     width: 35px;
+    height: 35px;
+    background-color: #eee;
     border-radius: 50%;
     overflow: hidden;
-    align-self: stretch;
 }
 .header .user-section .img-holder img{
     width: 100%;
 }
 @media(max-width:400px){
     .header{
-        grid-template-columns: 1fr;
         gap: 20px;
     }
     .header form{
