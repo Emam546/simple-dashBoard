@@ -43,7 +43,7 @@
     cursor: pointer;
     margin: auto;
 }
-.header .user-section i.notification{
+.header .user-section i{
     position: relative;
 }
 .header .user-section i.notification::after{
@@ -52,10 +52,10 @@
     --size:9px;
     width: var(--size);
     height: var(--size);
-    background-color: red;
+    background-color: var(--red-color);
     top: 0;
     right: -3px;
-    
+    border-radius: 50%;
 }
 .header .user-section .img-holder{
     width: 35px;

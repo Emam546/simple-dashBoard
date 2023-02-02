@@ -1,0 +1,152 @@
+.friends-page .boxes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 20px;
+}
+@media (max-width:768px){
+    .friends-page .boxes-container{
+        grid-template-columns: 1fr;
+    }
+}
+.friends-page .boxes-container .box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.friends-page .boxes-container .box .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.friends-page .boxes-container .box .img-holder{
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+    background-color: #eee;
+}
+.friends-page .box .img-holder img{
+    width: 100%;
+}
+
+.friends-page .box .title h4{
+    margin-top: 10px;
+}
+.friends-page .box .title p{
+    color: var(--grey-color);
+    font-size: 15px;
+}
+.friends-page .box .text-container{
+    border: 1px solid #eee;
+    border-width: 1px 0;
+    padding: 20px 0;
+    margin-top: 15px;
+}
+.friends-page .box .text-container p{
+    margin-bottom: 10px;
+}
+.friends-page .box .text-container p:empty::before{
+    display: none;
+}
+.friends-page .box .text-container p::before{
+    font-family: "Font Awesome 5 Free";
+    width: 25px;
+    display: inline-block;
+}
+.friends-page .box .text-container p.friends-p::before{
+    content: "\f118";
+}
+.friends-page .box .text-container p.projects-p::before{
+    content: "\f386";
+    font-weight: bold;
+}
+.friends-page .box .text-container p.articles-p::before{
+    content: "\f1ea";
+}
+.friends-page .box .end{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 10px;
+}
+.friends-page .box .end .created-at{
+    font-size: 14px;
+    color: var(--grey-color);
+}
+.friends-page .box .end .other-side{
+    
+    display:grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+.friends-page .box .end .other-side *{
+    text-decoration: none;
+    background-color: var(--color);
+    border:none;
+    color: white;
+    padding:5px 15px ;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+
+.friends-page .box .title h4:empty,
+.friends-page .box .title p:empty,
+.friends-page .box .text-container p:empty,
+.friends-page .box .end .created-at:empty{
+    height: 16px;
+    background-color: #eee;
+}
+.friends-page .box .title h4:empty{
+    width: 100px;
+    margin-bottom: 5px;
+}
+.friends-page .box .title p:empty{
+    width: 60px;
+}
+.friends-page .box .text-container p:empty{
+    width: 200px;
+    height: 20px;
+}
+.friends-page .box .end .created-at:empty{
+    width: 100px;
+}
+.friends-page .box .end .other-side a:empty{
+    height: 25px;
+    width: 70px;
+}
+.friends-page .box{
+    position: relative;
+}
+.friends-page .box .communicate{
+    position: absolute;
+    top: 20px;
+    
+    color: black;
+    display: flex;
+    gap: 5px;
+} 
+.friends-page .box .communicate a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+    background-color: #eee;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+}
+.friends-page .box .communicate a:not(:empty):hover{
+    background-color: var(--second-color);
+    color: white;
+}
+
+
+

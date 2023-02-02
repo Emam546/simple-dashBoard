@@ -6,6 +6,9 @@ import Settings from "./pages/settings";
 import Profile from "./pages/Profile";
 import Projects from "./pages/projects";
 import Courses from "./pages/courses";
+import Friends from "./pages/friends";
+import FilesPage from "./pages/files";
+import Plans from "./pages/Plans";
 
 function App() {
     return (
@@ -18,6 +21,9 @@ function App() {
                         <Route path="/profile" element={<Profile/>} />
                         <Route path="/projects" element={<Projects/>} />
                         <Route path="/courses" element={<Courses/>} />
+                        <Route path="/friends" element={<Friends/>} />
+                        <Route path="/files" element={<FilesPage/>} />
+                        <Route path="/plans" element={<Plans/>} />
                     </Route>
                     <Route path="*" element={<h1>404</h1>} />
                 </Routes>

@@ -7,6 +7,8 @@ import {
 } from "../../hooks/getuserFollowing";
 import { UserProfile } from "../../context/gitUser";
 import "./style.css";
+import { FollowerContext } from "../../context/followers";
+import LoadingCircleProvider from "../../components/loadingCircleProvider";
 function getRandomFollower(data: FollowingData) {
     const ranNum = Math.floor(Math.random() * data.length);
     const retData = data.at(ranNum);
@@ -72,27 +74,20 @@ function Box({ data }: { data: FollowingData }) {
     );
 }
 export default function Courses() {
-    const { login } = useContext(UserProfile);
-    const [data] = useGitUserFollowersData(login);
-
-    if (data === undefined || data === null)
-        return (
-            <div className="projects-page">
-                <Title>Projects</Title>
-                <LoadingCircle />
-            </div>
-        );
+    const data = useContext(FollowerContext) as FollowingData;
     return (
         <div className="courses-page">
             <Title>Courses</Title>
-            <div className="boxes-container">
-                <Box data={data} />
-                <Box data={data} />
-                <Box data={data} />
-                <Box data={data} />
-                <Box data={data} />
-                <Box data={data} />
-            </div>
+            <LoadingCircleProvider data={data}>
+                <div className="boxes-container">
+                    <Box data={data} />
+                    <Box data={data} />
+                    <Box data={data} />
+                    <Box data={data} />
+                    <Box data={data} />
+                    <Box data={data} />
+                </div>
+            </LoadingCircleProvider>
         </div>
     );
 }

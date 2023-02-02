@@ -1,0 +1,80 @@
+.plans .boxes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 20px;
+}
+@media(max-width:500px){
+    .plans .boxes-container{
+        grid-template-columns: 1fr;
+    }
+}
+.plans .boxes-container .box{
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+.plans .boxes-container .box .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.plans .boxes-container .box .title{
+    padding: 20px;
+    background-color: var(--color);
+    border: 3px solid white;
+    color: white;
+    outline: 4px solid var(--color);
+}
+.plans .boxes-container .box .title .price{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+.plans .boxes-container .box .title .price::before {
+    content: "\24";
+    font-size: 20px;
+    padding: 0 5px;
+}
+.plans .boxes-container .box ul{
+    padding: 0;
+    margin: 30px 0;
+}
+.plans .boxes-container .box ul li{
+    padding: 15px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.plans .boxes-container .box ul li::before{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    color: var(--green-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+.plans .boxes-container .box ul li.not-active::before{
+    content: "\f00d";
+    color: var(--red-color);
+}
+.plans .boxes-container .box ul li:not(:last-child){
+    border-bottom: 1px solid #eee;
+}
+.plans .boxes-container .box ul .help{
+    flex: 1;
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+}
+.plans .boxes-container .box .join{
+    padding:5px 10px;
+    background-color: var(--color);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+.plans .boxes-container .box .current-plan{
+    text-align: center;
+}

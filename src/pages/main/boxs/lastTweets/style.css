@@ -9,6 +9,8 @@
 }
 .main-page .tweets .title .img-holder{
     width: 50px;
+    height: 50px;
+    background-color: #eee;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -20,6 +22,13 @@
 }
 .main-page .tweets .title .info p{
     margin: 5px 0;
+}
+.main-page .tweets > p{
+    line-height: 1.6;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
 }
 .main-page .tweets .likes{
     display: flex;

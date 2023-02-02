@@ -12,7 +12,7 @@ export function useLocalStorage(name: string) {
 export function useLocalJson<T>(name:string,defaultData:T){
     const str=localStorage.getItem(name);
     const state = useState<T>(JSON.parse(str||"null") || defaultData);
-    const [data,setData]=state
+    const [data,]=state
     useEffect(()=>{
         localStorage.setItem(name,JSON.stringify(data) || "")
     },[name,data])

@@ -6,6 +6,7 @@ import Loading from "./components/loading";
 import { useGitUserData } from "./hooks/getGituser";
 import { useAfterPeriod } from "./hooks/afterperiod";
 import WidgetsProvider from "./context/widgets";
+import {FollowerProvider } from "./context/followers";
 
 const routes = [
     {
@@ -28,6 +29,18 @@ const routes = [
         title: "Courses",
         path: "/courses",
     },
+    {
+        title: "Friends",
+        path: "/friends",
+    },
+    {
+        title: "Files",
+        path: "/files",
+    },
+    {
+        title: "Plans",
+        path: "/plans",
+    },
 ];
 export function SharedLayout() {
     
@@ -49,10 +62,12 @@ export function SharedLayout() {
             <SideBar />
             <main>
                 <WidgetsProvider>
-                    <UserProfileProvider data={data}>
-                        <Header />
-                        <Outlet />
-                    </UserProfileProvider>
+                    <FollowerProvider name={data.login}>
+                        <UserProfileProvider data={data}>
+                            <Header />
+                            <Outlet />
+                        </UserProfileProvider>
+                    </FollowerProvider>
                 </WidgetsProvider>
             </main>
         </>

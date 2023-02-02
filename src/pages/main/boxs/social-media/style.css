@@ -22,13 +22,15 @@
 }
 
 .social-media .row {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 20px;
-    grid-auto-rows: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     position: relative;
 }
-
+.social-media .row >*{
+    position: relative;
+}
 .social-media .row::before {
     content: "";
     position: absolute;
@@ -62,10 +64,9 @@
 }
 
 .social-media .row p {
-    height: 100%;
-    position: relative;
     color: var(--color);
     font-size: 20px;
+    flex: 1;
 }
 
 .social-media .row a {
@@ -77,8 +78,8 @@
     background-color: var(--color);
     text-align: center;
     font-size: 18px;
-    position: relative;
     display: block;
+    min-width: 100px;
 }
 
 @media (max-width:768px) {

@@ -1,0 +1,147 @@
+.files-page .content-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.files-page .files-statics {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: fit-content;
+    flex: 1;
+
+}
+
+.files-page .boxes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    flex: 2;
+}
+
+.files-page .files-statics .box {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.files-page .files-statics .box .icon-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--color);
+}
+
+.files-page .files-statics .box .icon-container * {
+    position: relative;
+}
+
+.files-page .files-statics .box .icon-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color);
+    top: 0;
+    left: 0;
+    opacity: 30%;
+}
+
+.files-page .files-statics .box .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.files-page .files-statics .box .text-container span {
+    color: var(--grey-color);
+}
+
+.files-page .files-statics .box .size {
+    display: block;
+    margin: auto;
+}
+
+.files-page .files-statics button {
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--second-color);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.files-page .files-statics button::before {
+    content: "\f102";
+    margin: auto 0;
+    font-family: "Font Awesome 5 Free";
+    animation-name: UpAndDown;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes UpAndDown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.files-page .boxes-container .box {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.files-page .boxes-container .img-holder {
+    width: 90px;
+    margin: 10px auto;
+    margin-top: 20px;
+    transition: var(--main-trans);
+}
+
+.files-page .boxes-container .img-holder:hover {
+    transform: rotate(10deg);
+}
+
+.files-page .boxes-container .box h4 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.files-page .boxes-container .end {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.files-page .boxes-container .box {
+    position: relative;
+}
+.files-page .boxes-container .box .download{
+    position: absolute;
+    top: 10px;
+    margin: 0 5px;
+    font-size: 25px;
+    cursor: pointer;
+}

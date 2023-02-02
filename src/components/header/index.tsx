@@ -11,7 +11,7 @@ export default function Header() {
             </form>
             <div className="user-section">
                 <i className="fa-regular fa-bell notification"></i>
-                <a href={data.htm_url} target="_blank">
+                <a href={data.html_url} target="_blank">
                     <div className="img-holder">
                         <img src={data.avatar_url} alt={data.login} />
                     </div>

@@ -1,13 +1,12 @@
 import { ReactNode, useContext } from "react";
 import Title from "../../components/title";
 import {
-    useGitUserFollowersData,
     FollowingData,
 } from "../../hooks/getuserFollowing";
-import { UserProfile } from "../../context/gitUser";
-import LoadingCircle from "../../components/loading-circle";
 import "./style.css";
 import { faker } from "@faker-js/faker";
+import { FollowerContext } from "../../context/followers";
+import LoadingCircleProvider from "../../components/loadingCircleProvider";
 function getRandomFollowers(data: FollowingData) {
     const ranNum = () => Math.floor(Math.random() * data.length);
     const nums = [ranNum(), ranNum()];
@@ -63,24 +62,18 @@ function Box({ data }: { data: FollowingData }) {
     );
 }
 export default function Projects() {
-    const { login } = useContext(UserProfile);
-    const [data] = useGitUserFollowersData(login);
+    const data = useContext(FollowerContext) as FollowingData;
 
-    if (data === undefined || data === null)
-        return (
-            <div className="projects-page">
-                <Title>Projects</Title>
-                <LoadingCircle />
-            </div>
-        );
     return (
         <div className="projects-page">
             <Title>Projects</Title>
-            <div className="boxes-container">
-                {[...Array(10)].map(() => {
-                    return <Box data={data}/>;
-                })}
-            </div>
+            <LoadingCircleProvider data={data} >
+                <div className="boxes-container">
+                    {[...Array(10)].map(() => {
+                        return <Box data={data}/>;
+                    })}
+                </div>
+            </LoadingCircleProvider>
         </div>
     );
 }

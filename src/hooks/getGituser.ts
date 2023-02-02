@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { contains, isObject } from "../utils";
+
 export type Data = {
     avatar_url: string;
     html_url: string;
@@ -10,6 +11,9 @@ export type Data = {
     bio: string;
     hirable: null | boolean;
     location: string | null;
+    followers: number;
+    following: number;
+    created_at: string;
 };
 export type ReturnedData = Data | null | undefined;
 export function isValidData(val: unknown): val is Data {

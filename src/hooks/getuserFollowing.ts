@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { contains, isObject } from "../utils";
 export type FollowingData = {
     avatar_url: string;
     html_url: string;
     login: string;
     public_repos: number;
     location: string | null;
+
 }[];
 export type ReturnedData = FollowingData | null | undefined;
 export function isValidFollowingData(val: unknown): val is FollowingData {
